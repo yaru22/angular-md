@@ -6,14 +6,14 @@ Include `angular-md.js` in your project (you can do so via `bower install angula
 
 Load the directive after loading `angular.js`
 
-```
-<script src="<path to angular.js>"></script>
-<script src="<path to angular-md.js>"></script>
+```html
+<script src="path_to_angular.js"></script>
+<script src="path_to_angular-md.js"></script>
 ```
 
 Specify angular-md as a dependency of your Angular module.
 
-```
+```js
 var app = angular.module('ngApp', [
   'yaru22.directives.md'
 ]);
@@ -21,7 +21,7 @@ var app = angular.module('ngApp', [
 
 Use it in your project.
 
-```
+```html
 <html ng-app="ngApp">
 ...
 <body>
