@@ -23,6 +23,7 @@ module.exports = function(config) {
       // needed for elem.find() lookup by other than tag name
       'bower_components/jquery/jquery.js',
 
+      'bower_components/marked/lib/marked.js',
       'bower_components/angular/angular.js',
       'bower_components/angular-mocks/angular-mocks.js',
 
