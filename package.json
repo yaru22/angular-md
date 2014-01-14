@@ -3,22 +3,26 @@
     "name": "Brian Park",
     "email": "yaru22@gmail.com"
   },
-  "name": "ng-component-seed",
-  "description": "Angular component (directive, filter, service, etc.) seed that is used to kickstart the implementation.",
+
+  "name": "angular-md",
+  "description": "Angular directive to render Markdown text. It's built on blazingly fast markdown parser 'marked'.",
   "version": "0.1.0",
   "license": "MIT",
-  "homepage": "https://github.com/yaru22/ng-component-seed",
+
+  "homepage": "https://github.com/yaru22/angular-md",
   "repository": {
     "type": "git",
-    "url": "git://github.com/yaru22/ng-component-seed.git"
+    "url": "git://github.com/yaru22/angular-md.git"
   },
+
   "keywords": [
     "angular",
     "directive",
     "javascript",
-    "node.js",
-    "seed"
+    "markdown",
+    "marked"
   ],
+
   "dependencies": {
   },
   "devDependencies": {
@@ -42,6 +46,7 @@
     "karma-ng-html2js-preprocessor": "~0.1",
     "matchdep": "~0.3.0"
   },
+
   "scripts": {
     "test": "grunt test"
   }
