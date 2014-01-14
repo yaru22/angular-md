@@ -10,7 +10,7 @@
   <meta name="description" content="Angular md directive demo page.">
   <meta name="viewport" content="width=device-width">
 
-  <link href="component.css" rel="stylesheet" />
+  <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
 </head>
 <body>
   <md>
@@ -21,6 +21,8 @@ This directive renders [Markdown](http://daringfireball.net/projects/markdown/) 
 - This is a bullet point 2.
 - This is a bullet point 3.
 
+Code block is supported, too:
+
 ```js
 for (var i = 0; i < 10; i++) {
   console.log('angular-md is cool!');
@@ -29,6 +31,7 @@ for (var i = 0; i < 10; i++) {
   </md>
 
   <script src="marked.js"></script>
+  <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
   <script src="angular.js"></script>
   <script src="angular-md.js"></script>
   <script>

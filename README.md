@@ -1,12 +1,15 @@
 # angular-md [![Analytics](https://ga-beacon.appspot.com/UA-2694988-7/angular-md/readme?pixel)](https://github.com/yaru22/angular-md)
-Angular directive to render [Markdown](http://daringfireball.net/projects/markdown/) text. It's built on blazingly fast markdown parser [marked](https://github.com/chjj/marked).
+Angular directive to render [Markdown](http://daringfireball.net/projects/markdown/) text. It's built on blazingly fast markdown parser [marked][].
 
 ## Usage
 Include `angular-md.js` in your project (you can do so via `bower install angular-md`).
 
+Make sure to load [marked][] library. Optionally, load [highlightjs][] library (as well as the corresponding css file) for code highlighting.
 Load the directive after loading `angular.js`
 
 ```html
+<script src="path_to_marked.js"></script>
+<script src="path_to_highlightjs.js"></script>
 <script src="path_to_angular.js"></script>
 <script src="path_to_angular-md.js"></script>
 ```
@@ -42,3 +45,7 @@ This is a example of how to use angular-md.
 
 ## License
 This seed is released under permissive MIT License.
+
+
+[highlightjs]: https://github.com/isagalaev/highlight.js  "highlightjs"
+[marked]: https://github.com/chjj/marked  "marked"
