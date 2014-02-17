@@ -3,18 +3,15 @@
     "name": "Brian Park",
     "email": "yaru22@gmail.com"
   },
-
   "name": "angular-md",
   "description": "Angular directive to render Markdown text. It's built on blazingly fast markdown parser 'marked'.",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "license": "MIT",
-
   "homepage": "https://github.com/yaru22/angular-md",
   "repository": {
     "type": "git",
     "url": "git://github.com/yaru22/angular-md.git"
   },
-
   "ignore": [
     "demo",
     "test"
