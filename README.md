@@ -1,6 +1,10 @@
 # angular-md [![Analytics](https://ga-beacon.appspot.com/UA-2694988-7/angular-md/readme?pixel)](https://github.com/yaru22/angular-md)
 Angular directive to render [Markdown](http://daringfireball.net/projects/markdown/) text. It's built on blazingly fast markdown parser [marked][].
 
+## Demo
+Check out the demo [here](http://www.brianpark.ca/projects/angular_md/demo/).
+
+
 ## Usage
 Include `angular-md.js` in your project (you can do so via `bower install angular-md`).
 
@@ -38,7 +42,10 @@ This is a example of how to use angular-md.
 > To use or not to use...
 > - Anonymous
   </md>
-  ...
+  
+  <!-- or -->
+  
+  <md ng-model="mdText"></md>
 </body>
 </html>
 ```
