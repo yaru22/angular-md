@@ -11,10 +11,17 @@
   <meta name="viewport" content="width=device-width">
 
   <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+  <link rel="stylesheet" href="./main.css">
 </head>
 <body>
-  <md>
-# angular-md directive demo
+  <div class="container pure-g-r">
+    <div class="example pure-u-1">
+      <h2>Static Markdown Renderer</h2>
+      <div class="pure-g">
+        <div class="pure-u-1-2">
+          <md>
+## Example 1
 This directive renders [Markdown](http://daringfireball.net/projects/markdown/) text. It's built on blazingly fast markdown parser [marked](https://github.com/chjj/marked).
 
 - This is a bullet point 1.
@@ -28,16 +35,28 @@ for (var i = 0; i < 10; i++) {
   console.log('angular-md is cool!');
 }
 ```
-  </md>
+          </md>
+        </div>
+      </div>
+    </div>
+
+    <div class="example pure-u-1">
+      <h2>Dynamic Markdown Renderer</h2>
+      <div class="pure-g" ng-controller="Ex2Ctrl">
+        <div class="pure-u-1-2">
+          <textarea ng-model="mdText" cols="30" rows="10"></textarea>
+        </div>
+        <div class="pure-u-1-2">
+          <md ng-model="mdText"></md>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="marked.js"></script>
   <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
   <script src="angular.js"></script>
   <script src="angular-md.js"></script>
-  <script>
-    var app = angular.module('ngApp', [
-      'yaru22.directives.md'
-    ]);
-  </script>
+  <script src="./main.js"></script>
 </body>
 </html>

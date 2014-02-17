@@ -1,0 +1,14 @@
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.example {
+  margin-bottom: 2em;
+}
+
+md {
+  background-color: #eee;
+  display: block;
+  padding: 1em;
+}
