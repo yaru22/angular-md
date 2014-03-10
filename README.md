@@ -42,6 +42,10 @@ This is a example of how to use angular-md.
 > To use or not to use...
 > - Anonymous
   </md>
+
+  <!-- or -->
+  
+  <md ng-include="'text.md'"></md>
   
   <!-- or -->
   
