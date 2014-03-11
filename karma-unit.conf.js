@@ -28,7 +28,6 @@ module.exports = function(config) {
       'bower_components/angular-mocks/angular-mocks.js',
 
       'src/**/*.js',
-      'src/**/*.tmpl',
 
       'test/unit/**/*.js'
     ],
@@ -38,19 +37,6 @@ module.exports = function(config) {
     exclude: [
 
     ],
-
-
-    // generate js files from html templates
-    preprocessors: {
-      'src/*.tmpl': ['ng-html2js']
-    },
-
-
-    ngHtml2JsPreprocessor: {
-      // strip this from the file path
-      stripPrefix: 'src/'
-    },
-
 
     // test results reporter to use
     // possible values: 'dots', 'progress', 'junit', 'growl', 'coverage'

@@ -2,7 +2,7 @@
 
 'use strict';
 
-module.exports = function(grunt) {
+module.exports = function (grunt) {
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
 
@@ -11,8 +11,9 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     dirs: {
-      demo: 'demo',
-      dest: 'dist'
+      src: 'src',
+      dist: 'dist',
+      demo: 'demo'
     },
 
     meta: {
@@ -29,15 +30,15 @@ module.exports = function(grunt) {
     // Configuring grunt helpers
     //
 
-    clean: ['<%= dirs.dest %>'],
+    clean: ['<%= dirs.dist %>'],
 
     concat: {  // grunt-contrib-concat
       options: {
         banner: '<%= meta.banner %>'
       },
-      dist: {
-        src: ['src/*.js'],
-        dest: '<%= dirs.dest %>/<%= pkg.name %>.js'
+      js: {
+        src: ['<%= dirs.src %>/*.js'],
+        dest: '<%= dirs.dist %>/<%= pkg.name %>.js'
       }
     },
 
@@ -57,32 +58,21 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           flatten: true,
-          src: ['src/*'],
+          src: [
+            '<%= dirs.dist %>/<%= pkg.name %>.js'
+          ],
           dest: '<%= dirs.demo %>/',
           filter: 'isFile'
         }]
-      },
-      dist: {
-        files: [{
-          expand: true,
-          flatten: true,
-          src: ['src/*.tmpl'],
-          dest: '<%= dirs.dest %>/',
-          filter: 'isFile'
-        }]
-      }
-    },
-
-    cssmin: {  // grunt-contrib-cssmin
-      combine: {
-        files: {
-          '<%= dirs.dest %>/<%= pkg.name %>.min.css': ['src/*.css']
-        }
       }
     },
 
     jshint: {  // grunt-contrib-jshint
-      all: ['Gruntfile.js', 'src/**/*.js', 'test/unit/**/*.js'],
+      all: [
+        'Gruntfile.js',
+        '<%= dirs.src %>/**/*.js',
+        'test/unit/**/*.js'
+      ],
       options: {
         jshintrc: '.jshintrc'
       }
@@ -99,9 +89,9 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= dirs.dest %>',
+          cwd: '<%= dirs.dist %>',
           src: '*.js',
-          dest: '<%= dirs.dest %>'
+          dest: '<%= dirs.dist %>'
         }]
       }
     },
@@ -112,7 +102,7 @@ module.exports = function(grunt) {
       }
     },
 
-    release: { // grunt-release
+    release: {  // grunt-release
       options: {
         file: 'bower.json',
         npm: false
@@ -124,14 +114,16 @@ module.exports = function(grunt) {
         banner: '<%= meta.banner %>'
       },
       dist: {
-        src: ['<%= dirs.dest %>/<%= pkg.name %>.js'],
-        dest: '<%= dirs.dest %>/<%= pkg.name %>.min.js'
+        src: ['<%= dirs.dist %>/<%= pkg.name %>.js'],
+        dest: '<%= dirs.dist %>/<%= pkg.name %>.min.js'
       }
     },
 
     watch: {  // grunt-contrib-watch
       src: {
-        files: ['src/*.js', 'src/*.css'],
+        files: [
+          '<%= dirs.src %>/*.js'
+        ],
         tasks: ['test'],
       }
     }
@@ -161,7 +153,6 @@ module.exports = function(grunt) {
     'concat',
     'ngmin',
     'uglify',
-    'cssmin',
     'copy'
   ]);
 
