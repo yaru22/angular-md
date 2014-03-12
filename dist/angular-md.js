@@ -1,5 +1,5 @@
 'use strict';
-angular.module('yaru22.directives.md', []).directive('md', function () {
+angular.module('yaru22.md', []).directive('md', function () {
   if (typeof hljs !== 'undefined') {
     marked.setOptions({
       highlight: function (code, lang) {

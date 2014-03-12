@@ -1,5 +1,5 @@
 var app = angular.module('ngApp', [
-  'yaru22.directives.md'
+  'yaru22.md'
 ]);
 
 app.controller('Ex3Ctrl', function ($scope) {

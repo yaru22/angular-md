@@ -4,7 +4,6 @@ Angular directive to render [Markdown](http://daringfireball.net/projects/markdo
 ## Demo
 Check out the demo [here](http://www.brianpark.ca/projects/angular_md/demo/).
 
-
 ## Usage
 Include `angular-md.js` in your project (you can do so via `bower install angular-md`).
 
@@ -22,7 +21,7 @@ Specify angular-md as a dependency of your Angular module.
 
 ```js
 var app = angular.module('ngApp', [
-  'yaru22.directives.md'
+  'yaru22.md'
 ]);
 ```
 

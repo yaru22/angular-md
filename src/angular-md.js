@@ -2,7 +2,7 @@
 
 'use strict';
 
-angular.module('yaru22.directives.md', [
+angular.module('yaru22.md', [
 ]).directive('md', function () {
   if (typeof hljs !== 'undefined') {
     marked.setOptions({

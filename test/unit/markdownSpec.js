@@ -7,7 +7,7 @@ describe('Static markdown rendering', function () {
   var elm, scope;
 
   // load the code
-  beforeEach(module('yaru22.directives.md'));
+  beforeEach(module('yaru22.md'));
 
   beforeEach(inject(function ($rootScope, $compile) {
     // we might move this tpl into an html file as well...
@@ -31,7 +31,7 @@ describe('Dynamic markdown rendering', function () {
   var elm, scope;
 
   // load the code
-  beforeEach(module('yaru22.directives.md'));
+  beforeEach(module('yaru22.md'));
 
   beforeEach(inject(function ($rootScope, $compile) {
     // we might move this tpl into an html file as well...
