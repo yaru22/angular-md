@@ -8,6 +8,7 @@
   "description": "Angular directive to render Markdown text. It's built on blazingly fast markdown parser 'marked'.",
   "version": "1.0.0",
   "license": "MIT",
+  "main": "dist/angular-md.min.js",
   "homepage": "https://github.com/yaru22/angular-md",
   "repository": {
     "type": "git",
